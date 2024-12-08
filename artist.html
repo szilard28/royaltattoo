@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Skin Tattoo</title>
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Impact, 'Arial Narrow Bold', sans-serif;
+            background-color: #1445e7;
+        }
+
+        header {
+            font-family: Impact, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            color: #000;
+            padding: 100px 100px;
+            background: linear-gradient(60deg, #0027fd, #ffd007, #ffffff, #070bff );
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 6s ease infinite;
+    -moz-animation: AnimationName 6s ease infinite;
+    animation: AnimationName 6s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+        /* Navbár csúszka stílus */
+        .slider-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .slider-nav .nav-item {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .slider-nav .nav-item:hover {
+            color: #ffd007;
+        }
+
+        .slider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background-color: #ffd007;
+            width: 100px; /* Kezdeti szélesség */
+            transition: all 0.5s ease-in-out ;
+        }
+
+        main {
+            margin-top: 80px; /* Hely a fix pozíciójú navbár miatt */
+            padding: 20px;
+        }
+
+        .artist-section {
+            border-bottom: 2px solid #fff;
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, #ffd007, #ffffff, #4400ff, #1b025f);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .artist-card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+
+        .artist-info {
+            color: #fff;
+            text-align: left;
+        }
+
+        .artist-info h3 {
+    color: #ffd007;
+    margin: 0;
+    font-size: 30px;
+    text-align: left; /* Nevek igazítása balra */
+}
+.artist-info p {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 50px; /* Némi távolság a név és a leírás között */
+}
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo { 
+            width: 200px; 
+            height: 200px; 
+            
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Fejléc -->
+    <header>
+        <h1>Royal Skin Tattoo</h1>
+        <p>Professzionális tetoválások egy helyen</p>
+        <img src="icon.png" alt="Royal Skin Tattoo logo" class="logo"> 
+    </header>
+
+    <!-- Navigációs sáv -->
+    <nav class="slider-nav">
+        <div class="nav-item" onclick="navigateTo('index')">Kezdőoldal</div>
+        <div class="nav-item" onclick="navigateTo('history')">Történetünk</div>
+        <div class="nav-item" onclick="navigateTo('contact')">Kapcsolat</div>
+        <div class="slider"></div>
+    </nav>
+
+    <!-- Fő tartalom -->
+    <main>
+        <div class="container">
+            <h2 class="text-white text-center mb-4">Művészeink</h2>
+            <!-- Első művész -->
+            <div class="row artist-section">
+                <div class="col-md-6 d-flex align-items-center artist-card">
+                    <img src="pfp.jpg" alt="Tetoválóművész 1">
+                </div>
+                <div class="col-md-6 d-flex align-items-center artist-info">
+                    <h3>Kecskés Roland</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit officia aliquid sapiente, ex delectus illo hic illum unde at corrupti velit voluptas dolorem ipsum odit magni, beatae cupiditate vitae! Rem.</p>
+                </div>
+            </div>
+            <!-- Második művész -->
+            <div class="row artist-section">
+                <div class="col-md-6 d-flex align-items-center artist-card">
+                    <img src="pfp.jpg" alt="Tetoválóművész 2">
+                </div>
+                <div class="col-md-6 d-flex align-items-center artist-info">
+                    <h3>Jakab Balázs</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus earum corporis mollitia sunt cum ea alias, eius quis consectetur? Quo obcaecati sint suscipit similique enim neque aspernatur corrupti culpa asperiores.</p>
+                </div>
+            </div>
+            <!-- Harmadik művész -->
+            <div class="row artist-section">
+                <div class="col-md-6 d-flex align-items-center artist-card">
+                    <img src="pfp.jpg" alt="Tetoválóművész 3">
+                </div>
+                <div class="col-md-6 d-flex align-items-center artist-info">
+                    <h3>Tóth Tamara</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laudantium fuga enim nulla ea, quod dolorem sapiente iste facilis optio reprehenderit dolores odio rerum accusamus, asperiores alias et maiores.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lábjegyzet -->
+    <footer>
+        <p>&copy; 2024 Royal Skin Tattoo. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        // Frissíti a slider pozícióját és szélességét
+        function updateSliderPosition(index) {
+            const activeNavItem = navItems[index];
+            const navRect = activeNavItem.getBoundingClientRect();
+            const sliderWidth = navRect.width;
+            const sliderLeft = activeNavItem.offsetLeft;
+
+            slider.style.width = `${sliderWidth}px`;
+            slider.style.left = `${sliderLeft}px`;
+        }
+
+        // Event listener hozzáadása
+        navItems.forEach((item, index) => {
+            item.addEventListener('mouseover', () => {
+                updateSliderPosition(index);
+            });
+            item.addEventListener('click', () => {
+                updateSliderPosition(index);
+            });
+        });
+
+        // Alapértelmezett slider pozíció
+        window.onload = () => updateSliderPosition(0);
+
+        // Navigációs függvény
+        function navigateTo(page) {
+             window.location.href = `${page}.html`
+            
+        }
+    </script>
+<script>
+        // Smooth scroll
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+</script>
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
