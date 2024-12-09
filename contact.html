@@ -20,11 +20,34 @@
         }
 
         header {
-            background: linear-gradient(45deg, #ffd007, #ffffff, #4400ff, #1b025f);
-            color: #000;
-            padding: 330px;
+            font-family: Impact, 'Arial Narrow Bold', sans-serif;
             text-align: center;
-        }
+            color: #000;
+            padding: 100px 100px;
+            background: linear-gradient(60deg, #0027fd, #ffd007, #ffffff, #070bff );
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 6s ease infinite;
+    -moz-animation: AnimationName 6s ease infinite;
+    animation: AnimationName 6s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
 
         /* Navbár csúszka stílus */
         .slider-nav {
@@ -68,40 +91,6 @@
             margin-top: 80px; /* Hely a fix pozíciójú navbár miatt */
             padding: 20px;
         }
-
-        .artist-section {
-            border-bottom: 2px solid #fff;
-            margin-bottom: 50px;
-            background: linear-gradient(45deg, #ffd007, #ffffff, #4400ff, #1b025f);
-            border-radius: 20px;
-            padding: 20px;
-        }
-
-        .artist-card img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 20px;
-            margin-right: 20px;
-        }
-
-        .artist-info {
-            color: #fff;
-            text-align: left;
-        }
-
-        .artist-info h3 {
-    color: #ffd007;
-    margin: 0;
-    font-size: 30px;
-    text-align: left; /* Nevek igazítása balra */
-}
-.artist-info p {
-    font-size: 16px;
-    color: #fff;
-    margin-top: 50px; /* Némi távolság a név és a leírás között */
-}
-
         footer {
             background-color: #000;
             color: #fff;
@@ -116,6 +105,50 @@
 
 
         }
+
+.kiskep {
+    width: 10%;
+    height: 10%;
+}
+
+.contact-div{
+    border-bottom: 2px solid #fff;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #ffffff, #4400ff, #1b025f);
+            border-radius: 20px;
+            padding: 20px;
+            
+}
+.gombos {
+    background: linear-gradient(30deg, #fdff9a, #eaff2c,#ffd007);
+
+}
+.gombos:hover {
+    background: linear-gradient(60deg, #0027fd, #ffd007, #ffffff, #070bff );
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 6s ease infinite;
+    -moz-animation: AnimationName 6s ease infinite;
+    animation: AnimationName 6s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+
     </style>
 </head>
 <body>
@@ -136,41 +169,39 @@
     </nav>
 
     <!-- Fő tartalom -->
-    <main>
-        <div class="container">
-            <h2 class="text-white text-center mb-4">Művészeink</h2>
-            <!-- Első művész -->
-            <div class="row artist-section">
-                <div class="col-md-6 d-flex align-items-center artist-card">
-                    <img src="pfp.jpg" alt="Tetoválóművész 1">
-                </div>
-                <div class="col-md-6 d-flex align-items-center artist-info">
-                    <h3>Kovács Anna</h3>
-                    <p>Szakterülete: Finomvonalas tetoválások, minimalista stílus. Anna minden munkájában a részletekre összpontosít, és a tetoválások mindig egyediek és személyre szabottak.</p>
-                </div>
-            </div>
-            <!-- Második művész -->
-            <div class="row artist-section">
-                <div class="col-md-6 d-flex align-items-center artist-card">
-                    <img src="pfp.jpg" alt="Tetoválóművész 2">
-                </div>
-                <div class="col-md-6 d-flex align-items-center artist-info">
-                    <h3>Szabó Péter</h3>
-                    <p>Szakterülete: Színes portrék és realizmus. Péter a színek mestere, aki a tetoválásokat élénk árnyalatokkal kelti életre, lenyűgöző precizitással.</p>
-                </div>
-            </div>
-            <!-- Harmadik művész -->
-            <div class="row artist-section">
-                <div class="col-md-6 d-flex align-items-center artist-card">
-                    <img src="pfp.jpg" alt="Tetoválóművész 3">
-                </div>
-                <div class="col-md-6 d-flex align-items-center artist-info">
-                    <h3>Tóth Éva</h3>
-                    <p>Szakterülete: Absztrakt minták és geometriai formák. Éva előszeretettel keveri az absztrakciót és a geometriát, hogy igazán különleges műalkotásokat hozzon létre.</p>
-                </div>
-            </div>
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 800px; padding-bottom: 30px;">
+        <!-- Bal oldali rész -->
+        <div style="width: 300px;">
+            <h3>Email: royalskin.msz@gmail.com</h3>
+            <img src="gmail.png" alt="gmail" class="kiskep" style="max-width: 100%;">
+            <button onclick="location.href='mailto:royalskin.msz@gmail.com'" type="button" class="gombos">
+                Írj emailt!
+            </button>
+            <h3>Telefon: +36707726426</h3>
+            <img src="telefon.png" alt="gmail" class="kiskep" style="max-width: 100%;">
+
+            <button onclick="copyText()" type="button" class="gombos">Hívj fel!</button>
+            
         </div>
-    </main>
+    
+        <!-- Jobb oldali rész -->
+        <div style="width: 300px; text-align: left;">
+            <h3>Instagram: Royal Skin Tattoo</h3>
+            <img src="instagram.png" alt="Instagram" class="kiskep" style="max-width: 100%;">
+            <button onclick="location.href='https://www.instagram.com/royalskin.tattoo/'" type="button" class="gombos">
+                Vigyél oda!
+            </button>
+    
+            <h3>Facebook: Royal Skin Tattoo</h3>
+            <img src="face.png" alt="Facebook" class="kiskep" style="max-width: 100%;">
+            <button onclick="location.href='https://www.facebook.com/royalskintattoo/'" type="button" class="gombos">
+                Vigyél oda!
+            </button>
+        </div>
+    </div>
+    
+
+
 
     <!-- Lábjegyzet -->
     <footer>
@@ -226,5 +257,14 @@
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
     </script>
+
+   <script>
+    function copyText() {
+        const textToCopy = "+36707726426";
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => alert("Szöveg kimásolva: " + textToCopy))
+            .catch(err => console.error("Hiba történt a másolás közben: ", err));
+    }
+</script>
 </body>
 </html>
